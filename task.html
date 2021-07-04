@@ -1,0 +1,29 @@
+ <?php
+
+//STARTING THE SESSIONS
+session_start();
+error_reporting(0);
+
+//USING SESSIONS TO GET THE VARIABLES
+$name = $_SESSION['name'];
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+
+//USING COOKIES TO GET THE VARIABLES 
+//GET THE COOKIES
+//$gender= $_COOKIE['gender'] ;
+//$name = $_COOKIE['fname'];
+//$username = $_COOKIE['username'];
+//$password = $_COOKIE['password'] ;
+
+if ($username = $_SESSION['username'] && $password = $_SESSION['password']){
+    echo "<br>";
+    "<h4> Welcome ". htmlspecialchars($name) ."</h4>";
+    echo "<h4>Logged in Successful, click here to <a href='logout.php'>LOGOUT</a></h4>" ;
+    
+        echo "<br>";
+        <h1>NO USERNAME FOUND</h1>;
+        <h4>click here to <a href='logout.php'>LOGOUT</a></h4>;
+    }
+    
+?> 
